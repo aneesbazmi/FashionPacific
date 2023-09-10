@@ -1,0 +1,168 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 5%;
+  }
+  
+  .card {
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.2s;
+    cursor: pointer;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-image {
+    width: 100%;
+    max-height: 200px; /*Limit the maximum height to avoid excessive stretching*/
+    object-fit: contain; /* Use "contain" to fit the entire image without cropping */
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+  
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+  }
+  
+  .card-description {
+    font-size: 14px;
+    color: #666;
+    margin: 10px 0;
+  }
+  
+  .card-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .card-category {
+    font-size: 14px;
+    font-weight: bold;
+    color: #0088cc;
+  }
+  
+  .card-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .card-rating {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .card-rate {
+    font-size: 14px;
+    color: #ff8800;
+  }
+  
+  .card-count {
+    font-size: 14px;
+    color: #666;
+  }
+
+  /* Updated CSS to limit description to 3 lines and style the button */
+.card-description {
+    font-size: 14px;
+    color: #666;
+    margin: 10px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limit to 3 lines */
+    -webkit-box-orient: vertical;
+  }
+  
+  .add-to-cart-button {
+    background-color: #0088cc;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .add-to-cart-button:hover {
+    background-color: #0077aa;
+  }
+  
+  .category {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    margin: 20px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.2s;
+  }
+
+  .category:hover {
+    transform: scale(1.05);
+  }
+
+  .electronics {
+    background-color: #75b8f9;
+    color: #fff;
+  }
+
+  .cosmetics {
+    background-color: #f4869c;
+    color: #fff;
+  }
+
+  .clothing {
+    background-color: #ffc764;
+    color: #fff;
+  }
+
+  .cat_container{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2vh;
+    background-color: #f0f0f0;
+  }
+
+  @media screen and (max-width : 600px) {
+    .cat_container{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .form-control:focus {
+    outline: none;
+  }
+  input[type=text] {
+    /* width: 100%; */
+    box-sizing: border-box;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+  }
+  
+  input[type=text]:focus {
+    border: 3px solid #555;
+  }

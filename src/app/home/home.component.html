@@ -1,0 +1,51 @@
+<div class="cat_container">
+
+
+
+  <div class="category electronics">
+    <h2>Electronics</h2>
+    <p>Discover our latest electronic gadgets</p>
+  </div>
+
+  <div class="category cosmetics">
+    <h2>Cosmetics</h2>
+    <p>Enhance your beauty with our products</p>
+  </div>
+
+  <div class="category clothing">
+    <h2>Clothing</h2>
+    <p>Upgrade your wardrobe with our trendy</p>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row mt-5">
+    <div class="col-sm-12 col-lg-4 mx-auto">
+      <div class="input-group"> <!-- Wrap input and button in an input group -->
+        <input type="text" class="form-control" placeholder="Enter search query" [(ngModel)]="searchQuery">
+        <div class="input-group-append">
+          <button type="button" class="btn btn-outline-success"><i class="bi bi-search"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="card-container">
+    <div *ngFor="let product of products | productFilter: searchQuery" class="card">
+      <img [src]="product.image" alt="Product Image" class="card-image">
+      <div class="card-content">
+        <h2 class="card-title">{{ product.title }}</h2>
+        <p class="card-description">{{ product.description }}</p>
+        <div class="card-details">
+          <p class="card-category">{{ product.category }}</p>
+          <p class="card-price">$ {{ product.price }}</p>
+        </div>
+        <div class="card-rating">
+          <p class="card-rate">Rating: {{ product.rating.rate }}</p>
+          <p class="card-count">{{ product.rating.count }} reviews</p>
+          <button (click)="OnAdd(product)" class="add-to-cart-button">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

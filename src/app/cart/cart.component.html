@@ -1,0 +1,66 @@
+<div class="container mt-5">
+    <br>
+
+    <div class="ms-5  cart-details">
+        <div class="cart-items-container">
+            <div *ngFor="let cartitem  of cartitems" class="card mb-5">
+                <i (click)="RemoveCartItem(cartitem.id)"
+                    style="font-size: 30px; cursor: pointer; margin-left:auto ; font-weight: bold; float: right;"
+                    class="bi bi-x"></i>
+                <div class="card-content">
+
+                    <div>
+
+                        <img [src]="cartitem.image" alt="Product Image" class="card-image">
+
+                    </div>
+
+                    <div>
+                        <b class="card-title">{{ cartitem.title }}</b>
+                        <p>price <strong>{{cartitem.price | currency}}</strong></p>
+                        <div class="quantity-counter">
+                            <strong style="padding-right: 10px;">quantity</strong>
+                            <button (click)="decreaseItemQuantity(cartitem.id)"><strong>-</strong></button>
+                            <span>{{cartitem.quantity }}</span>
+                            <button (click)="increaseItemQuantity(cartitem.id)"><strong>+</strong></button>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="cart-total-summary ms-3">
+        <div class="cart-total-summary-inner-div">
+            <span> sub total:</span>
+            <span style="float: right;"> {{total_price | currency}}</span>
+            <br>
+            <span>delivery:</span>
+            <span style="float: right;"> 0 </span>
+            <br>
+            <hr>
+
+            <span> total </span>
+            <span style="float: right;">
+                {{total_price | currency}}
+            </span>
+            <hr>
+            <br>
+            <br>
+            <br>
+            <div class="text-center">
+                <button class="checkout-button">
+                    checkout <i class="bi bi-arrow-right"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- </div> -->
+</div>
