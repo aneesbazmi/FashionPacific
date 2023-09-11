@@ -115,6 +115,7 @@
     text-align: center;
     padding: 20px;
     transition: transform 0.2s;
+    cursor: pointer;
   }
 
   .category:hover {
